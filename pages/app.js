@@ -56,7 +56,6 @@ function todo() {
         return listItem;
     };
 
-
     const addTask = function() {
         console.log("Add Task...");
         //Create a new list item with the text from the #new-task:
