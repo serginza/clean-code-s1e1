@@ -86,10 +86,10 @@ function todo() {
         const label = listItem.querySelector("label");
         const editBtn = listItem.querySelector(".element__edit");
         const containsClass = listItem.classList.contains("edit-mode");
-        //If class of the parent is .editmode
+        //If class of the parent is .edit-mode
         if(containsClass) {
 
-            //switch to .editmode
+            //switch to .edit-mode
             //label becomes the inputs value.
             label.innerText = editInput.value;
             editBtn.innerText = "Edit";
@@ -98,7 +98,7 @@ function todo() {
             editBtn.innerText = "Save";
         }
 
-        //toggle .editmode on the parent.
+        //toggle .edit-mode on the parent.
         listItem.classList.toggle("edit-mode");
     };
 
@@ -111,7 +111,6 @@ function todo() {
         //Remove the parent list item from the ul.
         ul.removeChild(listItem);
     };
-
 
     //Mark task completed
     const taskCompleted = function() {
@@ -140,7 +139,6 @@ function todo() {
 
     //The glue to hold it all together.
 
-
     //Set the click handler to the addTask function.
     //addButton.onclick = addTask;
     addButton.addEventListener("click",addTask);
@@ -164,7 +162,6 @@ function todo() {
     //cycle over incompleteTaskHolder ul list items
     //for each list item
     for (let i = 0; i < incompleteTaskHolder.children.length;i++) {
-
         //bind events to list items chldren(tasksCompleted)
         bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
     };
@@ -174,7 +171,6 @@ function todo() {
         //bind events to list items chldren(tasksIncompleted)
         bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
     };
-
 };
 
 todo();
