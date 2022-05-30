@@ -33,18 +33,20 @@ function todo() {
 
         listItem.className = "element__str"
         label.innerText = taskString;
-        label.className = 'task';
+        label.className = 'element__task';
 
         //Each elements, needs appending
         checkBox.type = "checkbox";
+        checkBox.className = "element__check";
         editInput.type = "text";
-        editInput.className = "task";
+        editInput.className = "element__task_text";
 
         editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
-        editButton.className = "element__edit";
+        editButton.className = "element__edit btn";
 
-        deleteButton.className = "element__delete";
+        deleteButton.className = "element__delete btn";
         deleteButtonImg.src = "../assets/icons/remove.svg";
+        deleteButtonImg.className = "element__delete_img";
         deleteButton.appendChild(deleteButtonImg);
 
         //and appending.
@@ -117,6 +119,9 @@ function todo() {
 
         //Append the task list item to the #completed-tasks
         const listItem = this.parentNode;
+        const markCompleted = document.querySelector(".element__task");
+        
+        markCompleted.classList.add("element__task_completed");
         completedTasksHolder.appendChild(listItem);
         bindTaskEvents(listItem, taskIncomplete);
     };
@@ -126,7 +131,7 @@ function todo() {
         //Mark task as incomplete.
         //When the checkbox is unchecked
         //Append the task list item to the #incompleteTasks.
-        var listItem = this.parentNode;
+        const listItem = this.parentNode;
         incompleteTaskHolder.appendChild(listItem);
         bindTaskEvents(listItem,taskCompleted);
     };

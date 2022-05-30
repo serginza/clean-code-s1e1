@@ -10,16 +10,16 @@
 
   <body class="todo">
     <header class="top">
-      <img src="../assets/images/eisenhower-matrix.jpg" alt="eisenhower-matrix">
+      <img src="../assets/images/eisenhower-matrix.jpg" class="top__img" alt="eisenhower-matrix">
       <a class="top__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
     </header>
 
     <main class="main-page">
       <section>
-        <label for="new-task">Add Item</label>
-        <div class="task-row-wrapper">
-          <input id="new-task" class="task-row-wrapper__task" type="text">
-          <button>Add</button>
+        <label for="new-task" class="new-task">Add Item</label>
+        <div class="new-task__row-wrapper">
+          <input id="new-task" class="new-task__row-wrapper_text" type="text">
+          <button class="new-task__row-wrapper_btn btn">Add</button>
         </div>
       </section>
 
@@ -30,15 +30,15 @@
             <input class="element__check" type="checkbox">
             <label class="element__task">Pay Bills</label>
             <input type="text" class="element__task_text">
-            <button class="element__edit">Edit</button>
-            <button class="element__delete"><img src="../assets/icons/remove.svg"></button>
+            <button class="element__edit btn">Edit</button>
+            <button class="element__delete btn"><img src="../assets/icons/remove.svg" class="element__delete_img"></button>
           </li>
           <li class="element__str edit-mode">
             <input class="element__check" type="checkbox">
             <label class="element__task">Go Shopping</label>
             <input type="text" value="Go Shopping" class="element__task_text">
-            <button class="element__edit">Save</button>
-            <button class="element__delete"><img src="../assets/icons/remove.svg"></button>
+            <button class="element__edit btn">Save</button>
+            <button class="element__delete btn"><img src="../assets/icons/remove.svg" class="element__delete_img"></button>
           </li>
         </ul>
       </section>
@@ -48,10 +48,10 @@
         <ul id="completed-tasks" class="element">
           <li class="element__str">
             <input class="element__check" type="checkbox" checked>
-            <label class="element__task">See the Doctor</label>
+            <label class="element__task element__task_completed">See the Doctor</label>
             <input type="text" class="element__task_text">
-            <button class="element__edit">Edit</button>
-            <button class="element__delete"><img src="../assets/icons/remove.svg"></button>
+            <button class="element__edit btn">Edit</button>
+            <button class="element__delete btn"><img src="../assets/icons/remove.svg" class="element__delete_img"></button>
           </li>
         </ul>
       </section>
