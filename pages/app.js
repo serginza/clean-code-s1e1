@@ -119,9 +119,7 @@ function todo() {
 
         //Append the task list item to the #completed-tasks
         const listItem = this.parentNode;
-        const markCompleted = document.querySelector(".element__task");
-        
-        markCompleted.classList.add("element__task_completed");
+
         completedTasksHolder.appendChild(listItem);
         bindTaskEvents(listItem, taskIncomplete);
     };
